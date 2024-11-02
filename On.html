@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 10;
+            padding: 0;
+            background-color: #1a1a1a; /* Dark background */
+            color: #f0f0f0; /* Light text */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Full height */
+        }
+
+        header {
+            background: #222; /* Darker header */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #4CAF50; /* Green links */
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        nav ul li a:hover {
+            color: #81C784; /* Lighter green on hover */
+        }
+
+        .about-wrapper {
+            text-align: center; /* Center text in the wrapper */
+            margin: 20px; /* Add margin for spacing */
+        }
+
+        .profile-photo {
+            border-radius: 50%; /* Make the image round */
+            width: 200px; /* Set the width */
+            height: 200px; /* Set the height to match the width for a perfect circle */
+            object-fit: cover; /* Ensures the image covers the area nicely */
+            display: block; /* Center image */
+            margin: 0 auto; /* Center image */
+        }
+
+        section {
+            padding: 2rem;
+            border: 2px solid #4CAF50; /* Green border */
+            border-radius: 8px; /* Rounded corners */
+            margin: 1rem 0;
+            background: #2a2a2a; /* Slightly lighter background for sections */
+        }
+
+        h1, h2 {
+            margin: 0 0 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #222; /* Darker footer */
+            color: #fff;
+            margin-top: auto; /* Push footer to bottom */
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 0.5rem 0 0.2rem 0;
+        }
+
+        form input {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #4CAF50; /* Green border for inputs */
+            border-radius: 4px; /* Rounded corners for inputs */
+            background: #333; /* Dark input background */
+            color: #f0f0f0; /* Light input text */
+        }
+
+        form textarea {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #4CAF50; /* Green border for textarea */
+            border-radius: 4px; /* Rounded corners for textarea */
+            background: #333; /* Same background as input fields */
+            color: #f0f0f0; /* Light text */
+        }
+
+        form button {
+            padding: 0.5rem;
+            border: none;
+            background: #4CAF50; /* Green button */
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #81C784; /* Lighter green on button hover */
+        }
+
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block; /* Stack items on small screens */
+                margin: 10px 0; /* Adjust margin */
+            }
+
+            section {
+                padding: 1rem; /* Reduce padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-wrapper">
+        <img src="myphoto.jpg" alt="My Photo" class="profile-photo"> <!-- Image at the top -->
+        <h3>Arpon Islam</h3> <!-- Name under the photo -->
+    </div>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hellow, I'm Arpon Islam. I'm a student. I"m study on Electrical Engineering in Kushtia Polytechnic Institute.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <p>Now, I'm working on IT & Electrical Engineering in own thesis.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="mailto:arponislam90@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Personal Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
